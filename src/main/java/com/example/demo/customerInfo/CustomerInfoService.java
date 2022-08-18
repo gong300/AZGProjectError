@@ -1,5 +1,6 @@
 package com.example.demo.customerInfo;
 
+import com.example.demo.insuranceInfo.exception.DataNullException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -8,6 +9,70 @@ public class CustomerInfoService {
     @Autowired
     CustomerInfoRepository customerInfoRepository;
     public CustomerInfoModelResponse customerInfoCreate (CustomerInfoModelRequest request){
+        if(request.getCustomerID().equals("")||request.getCustomerID().isEmpty()){
+            throw new DataNullException("Customer ID");
+        }
+
+        if(request.getPhone().equals("")||request.getPhone().isEmpty()){
+            throw new DataNullException("Phone");
+        }
+
+        if(request.getEMail().equals("")||request.getEMail().isEmpty()){
+            throw new DataNullException("E-Mail");
+        }
+
+        if(request.getLastName().equals("")||request.getLastName().isEmpty()){
+            throw new DataNullException("Lastname");
+        }
+
+        if(request.getFirstName().equals("")||request.getFirstName().isEmpty()){
+            throw new DataNullException("Firstname");
+        }
+
+        if(request.getSex().equals("")||request.getSex().isEmpty()){
+            throw new DataNullException("Sex");
+        }
+
+        if(request.getTitle().equals("")||request.getTitle().isEmpty()){
+            throw new DataNullException("Title");
+        }
+
+        if(request.getBirthday().equals("")||request.getBirthday().isEmpty()){
+            throw new DataNullException("Birthday");
+        }
+
+        if(request.getJob().equals("")||request.getJob().isEmpty()){
+            throw new DataNullException("Job");
+        }
+
+        if(request.getNational().equals("")||request.getNational().isEmpty()){
+            throw new DataNullException("National");
+        }
+
+        if(request.getPersonalID().equals("")||request.getPersonalID().isEmpty()){
+            throw new DataNullException("ID Card");
+        }
+
+        if(request.getAddress().equals("")||request.getAddress().isEmpty()){
+            throw new DataNullException("Address");
+        }
+
+        if(request.getWeight().equals("")||request.getWeight().isEmpty()){
+            throw new DataNullException("Weight");
+        }
+
+        if(request.getHeight().equals("")||request.getHeight().isEmpty()){
+            throw new DataNullException("Height");
+        }
+
+        if(request.getStatus().equals("")||request.getStatus().isEmpty()){
+            throw new DataNullException("Status");
+        }
+
+        if(request.getAge().equals("")||request.getAge().isEmpty()){
+            throw new DataNullException("Age");
+        }
+
         CustomerInfoEntity customerInfoEntity = new CustomerInfoEntity();
         customerInfoEntity.setCustomerID(request.getCustomerID());
         customerInfoEntity.setAge(request.getAge());
