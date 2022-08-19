@@ -97,18 +97,19 @@ public class CustomerInfoService {
 
         CustomerInfoModelResponse response = new CustomerInfoModelResponse();
         response.setEMail(customerInfoEntityResponse.getEMail());
-        response.setPhone(customerInfoEntityResponse.getPhone());
-        response.setFirstName(customerInfoEntityResponse.getFirstName());
-        response.setLastName(customerInfoEntityResponse.getLastName());
-        response.setBirthday(customerInfoEntityResponse.getBirthday());
-        response.setTitle(customerInfoEntity.getTitle());
-        response.setWeight(customerInfoEntity.getWeight());
-        response.setHeight(customerInfoEntity.getHeight());
-        response.setSex(customerInfoEntityResponse.getSex());
-        response.setStatus(customerInfoEntity.getStatus());
-        response.setPersonalID(customerInfoEntity.getPersonalID());
-        response.setJob(customerInfoEntity.getJob());
-        response.setAddress(customerInfoEntity.getAddress());
+        response.setPolicyNumber(customerInfoEntityResponse.getPolicyNumber());;
+        //response.setPhone(customerInfoEntityResponse.getPhone());
+        //response.setFirstName(customerInfoEntityResponse.getFirstName());
+        //response.setLastName(customerInfoEntityResponse.getLastName());
+        //response.setBirthday(customerInfoEntityResponse.getBirthday());
+        //response.setTitle(customerInfoEntity.getTitle());
+        //response.setWeight(customerInfoEntity.getWeight());
+        //response.setHeight(customerInfoEntity.getHeight());
+        //response.setSex(customerInfoEntityResponse.getSex());
+        //response.setStatus(customerInfoEntity.getStatus());
+        //response.setPersonalID(customerInfoEntity.getPersonalID());
+        //response.setJob(customerInfoEntity.getJob());
+        //response.setAddress(customerInfoEntity.getAddress());
         //Mapping Value to return to FrontEnd
 
         return response;

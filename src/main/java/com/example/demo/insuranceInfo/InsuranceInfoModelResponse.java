@@ -8,6 +8,6 @@ public class InsuranceInfoModelResponse {
     private String InsurancePics;
     private String InsurancePrice;
     private String InsuranceDetails;
-
+    //private String InsuranceName;
 }
 

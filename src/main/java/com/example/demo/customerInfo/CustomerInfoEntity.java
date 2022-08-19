@@ -4,10 +4,9 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Getter
@@ -35,7 +34,7 @@ public class CustomerInfoEntity {
     private String Sex;
 
     @Column
-    private String Age; //Note
+    private String Age;
 
     @Column
     private String Title;
@@ -63,6 +62,12 @@ public class CustomerInfoEntity {
 
     @Column
     private String Status;
+
+    @Column
+    @GenericGenerator( name = "uuid2",strategy = "uuid2")
+    @GeneratedValue(strategy = GenerationType.IDENTITY,generator = "uuid2")
+    private String policyNumber;
+
     //UUID
     //Format date time
     //แก้ชื่อจากตัวใหญ่เป็นเล็ก
