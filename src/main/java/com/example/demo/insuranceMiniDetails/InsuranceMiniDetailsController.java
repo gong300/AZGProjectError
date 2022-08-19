@@ -14,18 +14,21 @@ public class InsuranceMiniDetailsController {
     @Autowired
     InsuranceMiniDetailsService insuranceMiniDetailsService;
 
+    @Autowired
+    InsuranceMiniDetailsRepository insuranceMiniDetailsRepository;
+
     @PostMapping("/InsuranceMiniDetails")
     public InsuranceMiniDetailsModelResponse insuranceMiniDetails(@RequestBody InsuranceMiniDetailsModelRequest request){
         return insuranceMiniDetailsService.insuranceMiniDetailsCreate(request);
     }
 
-    @PostMapping("/Po")
-    public List<InsuranceMiniDetailsModelResponse> searchByName(@RequestBody SearchNameRequest request){
-        return insuranceMiniDetailsService.searchByName(request.getSearchString());
+    @PostMapping("/Search")
+    public List<InsuranceMiniDetailsEntity> searchByName(@RequestBody SearchNameRequest request){
+        return insuranceMiniDetailsRepository.findByInsuranceMiniDetailsNameLike("%"+request.getSearchString()+"%");
     }
 
-    @GetMapping("/Noey")
-    public List<InsuranceMiniDetailsModelResponse> showAll(){
-        return insuranceMiniDetailsService.searchAll();
+    @GetMapping("/AllMiniDetails")
+    public List<InsuranceMiniDetailsEntity> findAll(){
+        return insuranceMiniDetailsRepository.findAll();
     }
 }

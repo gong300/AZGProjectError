@@ -65,35 +65,35 @@ public class InsuranceMiniDetailsService {
         return response;
     }
 
-    public List<InsuranceMiniDetailsModelResponse> searchByName (String searchString){
-       searchString = "%"+searchString+"%";
-       System.out.println(searchString);
-       List<InsuranceMiniDetailsEntity> insuranceMiniDetailsEntitySearch = insuranceMiniDetailsRepository.findByInsuranceMiniDetailsNameLike(searchString);
-
-       List<InsuranceMiniDetailsModelResponse> insuranceMiniDetailsModelResponseList = new ArrayList<>();
-       insuranceMiniDetailsEntitySearch.forEach(data->{
-           InsuranceMiniDetailsModelResponse response = new InsuranceMiniDetailsModelResponse();
-           response.setInsuranceMiniDetailsPic(data.getInsuranceMiniDetailsPic());
-           response.setInsuranceMiniDetailsPrice(data.getInsuranceMiniDetailsPrice());
-           response.setInsuranceMiniDetailsTBulletin(data.getInsuranceMiniDetailsTBulletin());
-           response.setInsuranceMiniDetailsSBulletin(data.getInsuranceMiniDetailsSBulletin());
-           response.setInsuranceMiniDetailsFBulletin(data.getInsuranceMiniDetailsFBulletin());
-           response.setInsuranceMiniDetailsName(data.getInsuranceMiniDetailsName());
-       });
-       return insuranceMiniDetailsModelResponseList;
-    }
-    public List<InsuranceMiniDetailsModelResponse> searchAll (){
-        List<InsuranceMiniDetailsEntity> insuranceMiniDetailsEntitySearch = insuranceMiniDetailsRepository.findAll();
-        List<InsuranceMiniDetailsModelResponse> insuranceMiniDetailsModelResponseList = new ArrayList<>();
-        insuranceMiniDetailsEntitySearch.forEach(data->{
-            InsuranceMiniDetailsModelResponse response = new InsuranceMiniDetailsModelResponse();
-            response.setInsuranceMiniDetailsPic(data.getInsuranceMiniDetailsPic());
-            response.setInsuranceMiniDetailsPrice(data.getInsuranceMiniDetailsPrice());
-            response.setInsuranceMiniDetailsTBulletin(data.getInsuranceMiniDetailsTBulletin());
-            response.setInsuranceMiniDetailsSBulletin(data.getInsuranceMiniDetailsSBulletin());
-            response.setInsuranceMiniDetailsFBulletin(data.getInsuranceMiniDetailsFBulletin());
-            response.setInsuranceMiniDetailsName(data.getInsuranceMiniDetailsName());
-        });
-        return insuranceMiniDetailsModelResponseList;
-    }
+//    public List<InsuranceMiniDetailsModelResponse> searchByName (String searchString){
+//       searchString = "%"+searchString+"%";
+//       System.out.println(searchString);
+//       List<InsuranceMiniDetailsEntity> insuranceMiniDetailsEntitySearch = insuranceMiniDetailsRepository.findByInsuranceMiniDetailsNameLike(searchString);
+//
+//       List<InsuranceMiniDetailsModelResponse> insuranceMiniDetailsModelResponseList = new ArrayList<>();
+//       insuranceMiniDetailsEntitySearch.forEach(data->{
+//           InsuranceMiniDetailsModelResponse response = new InsuranceMiniDetailsModelResponse();
+//           response.setInsuranceMiniDetailsPic(data.getInsuranceMiniDetailsPic());
+//           response.setInsuranceMiniDetailsPrice(data.getInsuranceMiniDetailsPrice());
+//           response.setInsuranceMiniDetailsTBulletin(data.getInsuranceMiniDetailsTBulletin());
+//           response.setInsuranceMiniDetailsSBulletin(data.getInsuranceMiniDetailsSBulletin());
+//           response.setInsuranceMiniDetailsFBulletin(data.getInsuranceMiniDetailsFBulletin());
+//           response.setInsuranceMiniDetailsName(data.getInsuranceMiniDetailsName());
+//       });
+//       return insuranceMiniDetailsModelResponseList;
+//    }
+//    public List<InsuranceMiniDetailsModelResponse> searchAll (){
+//        List<InsuranceMiniDetailsEntity> insuranceMiniDetailsEntitySearch = insuranceMiniDetailsRepository.findAll();
+//        List<InsuranceMiniDetailsModelResponse> insuranceMiniDetailsModelResponseList = new ArrayList<>();
+//        insuranceMiniDetailsEntitySearch.forEach(data->{
+//            InsuranceMiniDetailsModelResponse response = new InsuranceMiniDetailsModelResponse();
+//            response.setInsuranceMiniDetailsPic(data.getInsuranceMiniDetailsPic());
+//            response.setInsuranceMiniDetailsPrice(data.getInsuranceMiniDetailsPrice());
+//            response.setInsuranceMiniDetailsTBulletin(data.getInsuranceMiniDetailsTBulletin());
+//            response.setInsuranceMiniDetailsSBulletin(data.getInsuranceMiniDetailsSBulletin());
+//            response.setInsuranceMiniDetailsFBulletin(data.getInsuranceMiniDetailsFBulletin());
+//            response.setInsuranceMiniDetailsName(data.getInsuranceMiniDetailsName());
+//        });
+//        return insuranceMiniDetailsModelResponseList;
+//    }
 }
