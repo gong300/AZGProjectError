@@ -9,8 +9,8 @@ public class CustomerInfoService {
     @Autowired
     CustomerInfoRepository customerInfoRepository;
     public CustomerInfoModelResponse customerInfoCreate (CustomerInfoModelRequest request){
-         // if(request.getCustomerID().equals("")||request.getCustomerID().isEmpty()){
-         //   throw new DataNullException("Customer ID");
+        // if(request.getCustomerID().equals("")||request.getCustomerID().isEmpty()){
+        //   throw new DataNullException("Customer ID");
         //}
 
         if(request.getPhone().equals("")||request.getPhone().isEmpty()){
