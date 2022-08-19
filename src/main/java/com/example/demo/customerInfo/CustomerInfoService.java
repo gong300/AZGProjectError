@@ -9,9 +9,9 @@ public class CustomerInfoService {
     @Autowired
     CustomerInfoRepository customerInfoRepository;
     public CustomerInfoModelResponse customerInfoCreate (CustomerInfoModelRequest request){
-        if(request.getCustomerID().equals("")||request.getCustomerID().isEmpty()){
-            throw new DataNullException("Customer ID");
-        }
+         // if(request.getCustomerID().equals("")||request.getCustomerID().isEmpty()){
+         //   throw new DataNullException("Customer ID");
+        //}
 
         if(request.getPhone().equals("")||request.getPhone().isEmpty()){
             throw new DataNullException("Phone");
@@ -74,7 +74,7 @@ public class CustomerInfoService {
         }
 
         CustomerInfoEntity customerInfoEntity = new CustomerInfoEntity();
-        customerInfoEntity.setCustomerID(request.getCustomerID());
+        //customerInfoEntity.setCustomerID(request.getCustomerID());
         customerInfoEntity.setAge(request.getAge());
         customerInfoEntity.setPhone(request.getPhone());
         customerInfoEntity.setEMail(request.getEMail());
@@ -97,7 +97,8 @@ public class CustomerInfoService {
 
         CustomerInfoModelResponse response = new CustomerInfoModelResponse();
         response.setEMail(customerInfoEntityResponse.getEMail());
-        response.setPolicyNumber(customerInfoEntityResponse.getPolicyNumber());;
+        response.setPolicyID(customerInfoEntity.getPolicyID());
+        //response.setPolicyNumber(customerInfoEntityResponse.getPolicyNumber());;
         //response.setPhone(customerInfoEntityResponse.getPhone());
         //response.setFirstName(customerInfoEntityResponse.getFirstName());
         //response.setLastName(customerInfoEntityResponse.getLastName());

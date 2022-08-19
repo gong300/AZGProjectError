@@ -16,7 +16,9 @@ import javax.persistence.*;
 public class CustomerInfoEntity {
     @Id //primary key
     @Column //Column of Table
-    private String CustomerID;
+    @GenericGenerator( name = "uuid2",strategy = "uuid2")
+    @GeneratedValue(strategy = GenerationType.IDENTITY,generator = "uuid2")
+    private String PolicyID;
 
     @Column
     private String FirstName;
@@ -63,10 +65,10 @@ public class CustomerInfoEntity {
     @Column
     private String Status;
 
-    @Column
-    @GenericGenerator( name = "uuid2",strategy = "uuid2")
-    @GeneratedValue(strategy = GenerationType.IDENTITY,generator = "uuid2")
-    private String policyNumber;
+   // @Column
+    //@GenericGenerator( name = "uuid2",strategy = "uuid2")
+    //@GeneratedValue(strategy = GenerationType.IDENTITY,generator = "uuid2")
+    //private String policyNumber;
 
     //UUID
     //Format date time

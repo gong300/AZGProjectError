@@ -6,7 +6,8 @@ import lombok.Data;
 
 public class CustomerInfoModelResponse {
     private String EMail;
-    private String policyNumber;
+    private String PolicyID;
+    //private String policyNumber;
     //private String FirstName;
     //private String LastName;
     //private String Phone;

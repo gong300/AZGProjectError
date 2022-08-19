@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class CustomerInfoModelRequest {
 
-    private String CustomerID ;
+    //private String CustomerID ;
     private String FirstName;
     private String LastName;
     private String EMail;
