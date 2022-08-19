@@ -10,4 +10,5 @@ public class InsuranceMiniDetailsModelRequest {
     private String insuranceMiniDetailsFBulletin;
     private String insuranceMiniDetailsSBulletin;
     private String insuranceMiniDetailsTBulletin;
+    private String insuranceMiniDetailsName;
 }

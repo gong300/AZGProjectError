@@ -19,6 +19,7 @@ public class CustomerInfoEntity {
     @GenericGenerator( name = "uuid2",strategy = "uuid2")
     @GeneratedValue(strategy = GenerationType.IDENTITY,generator = "uuid2")
     private String PolicyID;
+    //Auto Gen ID
 
     @Column
     private String FirstName;

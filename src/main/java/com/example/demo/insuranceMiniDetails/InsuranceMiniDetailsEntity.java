@@ -18,7 +18,8 @@ public class InsuranceMiniDetailsEntity {
     @Column
     private String insuranceMiniDetailsID;
 
-    //Name of Insurance
+    @Column
+    private String insuranceMiniDetailsName;
 
     @Column
     private String insuranceMiniDetailsPic;

@@ -20,7 +20,8 @@ public class InsuranceInfoEntity {
     @Column
     private String InsurancePic; // frontend give base 64 to us
 
-    //Name
+    @Column
+    private String InsuranceName;
 
     @Column
     private String InsurancePrice;

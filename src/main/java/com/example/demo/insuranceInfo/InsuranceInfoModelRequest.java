@@ -9,5 +9,6 @@ public class InsuranceInfoModelRequest {
     private String InsurancePic;
     private String InsurancePrice;
     private String InsuranceDetails;
+    private String InsuranceName;
 
 }

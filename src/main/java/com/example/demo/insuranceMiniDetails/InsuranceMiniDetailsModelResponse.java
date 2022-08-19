@@ -9,5 +9,5 @@ public class InsuranceMiniDetailsModelResponse {
     private String insuranceMiniDetailsFBulletin;
     private String insuranceMiniDetailsSBulletin;
     private String insuranceMiniDetailsTBulletin;
-    //private String insuranceMiniDetailsName;
+    private String insuranceMiniDetailsName;
 }

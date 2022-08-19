@@ -26,6 +26,10 @@ public class InsuranceInfoService {
         if (request.getInsurancePrice().equals("")||request.getInsurancePrice().isEmpty()){
             throw new DataNullException("Insurance Price");
         }
+
+        if (request.getInsuranceName().equals("")||request.getInsuranceName().isEmpty()){
+            throw new DataNullException("Insurance Name");
+        }
         //Exception Condition
 
         InsuranceInfoEntity insuranceInfoEntity = new InsuranceInfoEntity();
@@ -33,6 +37,7 @@ public class InsuranceInfoService {
         insuranceInfoEntity.setInsurancePic(request.getInsurancePic());
         insuranceInfoEntity.setInsuranceDetails(request.getInsuranceDetails());
         insuranceInfoEntity.setInsurancePrice(request.getInsurancePrice());
+        insuranceInfoEntity.setInsuranceName(request.getInsuranceName());
 
         InsuranceInfoEntity insuranceInfoEntityResponse = insuranceInfoRepository.save(insuranceInfoEntity);
 
@@ -40,6 +45,7 @@ public class InsuranceInfoService {
         response.setInsuranceDetails(insuranceInfoEntityResponse.getInsuranceDetails());
         response.setInsurancePics(insuranceInfoEntityResponse.getInsurancePic());
         response.setInsurancePrice(insuranceInfoEntityResponse.getInsurancePrice());
+        response.setInsuranceName(insuranceInfoEntityResponse.getInsuranceName());
 
         return response;
     }
